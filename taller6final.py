@@ -5,7 +5,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import imutils
-
+import os
+cwd = os.getcwd()
+print(cwd)
 # seleccione la identificación de la imagen entre  'sift', 'surf', 'brisk', 'orb'
 cv2.ocl.setUseOpenCL(False)
 feature_extractor = 'orb' #  'sift', 'surf', 'brisk', 'orb'
@@ -13,8 +15,9 @@ feature_matching = 'bf'
 
 if __name__ == '__main__':
     #Cargar las imagenes de referencia y otra de ellas (la de referencia es la imagen2 )
-    image_name_1 =  r'C:\Users\Laura\Desktop\Procesamiento imagenes\stitching\Image_1.jpeg'
-    image_name_2 = r'C:\Users\Laura\Desktop\Procesamiento imagenes\stitching\Image_2.jpeg'
+    image_name_1 =  cwd +'\Image_1.jpeg'
+    print(image_name_1)
+    image_name_2 = cwd +'\Image_2.jpeg'
 
 
     #La imagen de train es la imagen a transformar
