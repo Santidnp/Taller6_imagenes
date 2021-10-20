@@ -168,7 +168,7 @@ if __name__ == '__main__':
 
 #########################UNION 3 imagenes##############################
 
-    image_name_1= r'C:\Users\Laura\Desktop\Procesamiento imagenes\stitching\Image_3.jpeg'
+    image_name_1= cwd +'\Image_3.jpeg'
     trainImg =cv2.imread(image_name_1)
     trainImg = cv2.resize(trainImg, (600, 600), interpolation=cv2.INTER_CUBIC)
     trainImg_gray = cv2.cvtColor(trainImg, cv2.COLOR_BGR2GRAY)
